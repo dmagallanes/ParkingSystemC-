@@ -13,8 +13,16 @@ class ParkingSystem {
             map[i + 100] = false;
         }
     }
+
+    void displayParkingSpots() {
+        for(auto itr = map.begin(); itr != map.end(); itr++) {
+            cout << "\nParking Spot: " << itr-> first << " Availability: " << itr->second;
+        }
+        cout << endl;
+    }
 };
 
 int main() {
     ParkingSystem parkingSystem;
+    parkingSystem.displayParkingSpots();
 }
